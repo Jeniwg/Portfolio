@@ -1,0 +1,67 @@
+body{
+    margin: 0px;
+}
+
+div.panel{
+    width: 20%;
+    height: 100vh;
+    background-color: dimgray;
+    position: fixed;
+    
+}
+
+div.core{
+    margin-left: 20%;
+    height: 100vh;
+    background-color: rgb(182, 177, 151);
+    position: relative;
+       
+}
+
+div.twowork{
+    margin-top: 3%;
+    margin-left: 8%;
+    width: 520px;
+    height: 300px;
+    position: absolute;
+    background-color: indianred;
+    transition: transform .2s;
+    
+}
+
+.twowork:hover{
+    transform: scale(1.2);
+}
+
+div.threework{
+    margin-top: 3%;
+    margin-left: 61%;
+    width: 520px;
+    height: 300px;
+    position: absolute;
+    background-color:indigo;
+    
+}
+
+.threework:hover{
+    transform: scale(1.2);
+    
+}
+
+div.aboutme{
+    margin-top: 22%;
+    position: absolute;
+    width:100%;
+    height: auto;
+    background-color: ivory;
+
+}
+h1, p{
+    text-align: center;
+}
+
+
+p{
+    margin: 0px;
+    font-size: 25px;
+}
