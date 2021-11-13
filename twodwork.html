@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
 </head>
+
 <body>
-    
+    <h1>Hey</h1>
+    <h1>bruh</h1>
+    <img id="img" src="img/car2d.png">
+
+    <button onclick="callName()">Click</button>
+
+    <script>
+        function callName() {
+            var myH1 = document.getElementsByTagName("h1");
+            
+           /* image.src = "img/wireframe.png";*/
+
+            for (var i = 0; i < myH1.length; i++) {
+                myH1[i].style.color = "red";
+            }
+
+        }
+
+
+
+    </script>
 </body>
+
 </html>
