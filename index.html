@@ -18,16 +18,20 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="panel">
-    <a onclick="main()" href="#top">
+    <a onclick="main()">
       <img class="logo" src="img/Elipse 1.png">
     </a>
     <br> <br>
     <div class="acordion">
-      <a onclick="aboutMe()" >
+      <a onclick="aboutMe()">
         <div class="acordion-item" style="background-color: #443C3C;">
           <div id="hidden" style="background-color: red;">
             <img class="img" src="img/Grupo 3.png">
@@ -35,15 +39,22 @@
       </a>
 
     </div>
-    <div class="acordion-item" style="background-color: #5B5252;">
+    <a onclick="skills()">
+      <div class="acordion-item" style="background-color: #5B5252;">
 
-    </div>
-    <div class="acordion-item" style="background-color: #756969;">
+      </div>
+    </a>
+    <a onclick="works()">
+      <div class="acordion-item" style="background-color: #756969;">
 
-    </div>
-    <div class="acordion-item" style="background-color: #9B8D8D;">
+      </div>
+    </a>
+    <a onclick="contact()">
+      <div class="acordion-item" style="background-color: #9B8D8D;">
 
-    </div>
+      </div>
+    </a>
+
 
   </div>
 
@@ -55,7 +66,7 @@
 
     <!-- Main Screen -->
 
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel" style="display:block">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="img/background.png" class="d-block w-100" alt="..."
@@ -82,8 +93,96 @@
 
     <!-- About Me -->
 
-    <div id="aboutMe" class="aboutMe">
+    <div id="aboutMe" class="aboutMe" style="display: none;">
+
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="margin-left: 25%; display: inline-flex;">
+      <h1>About Me</h1>
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="display: inline-block;">
+
+      <img src="img/2dicon.png"
+        style="position: absolute; vertical-align: middle; margin-left: 200px; margin-top: 140px;">
+      <img src="img/3dicon.png" style="position: absolute; vertical-align:bottom; margin-left: 200px;margin-top: 279px">
+      <img src="img/controlericon.png"
+        style="position: absolute; vertical-align:bottom; margin-left: 200px; margin-top: 419px;">
+      <img src="img/movieicon.png"
+        style="position: absolute; vertical-align:bottom; margin-left: 200px; margin-top: 559px;">
+      <img src="img/bookicon.png"
+        style="position: absolute; vertical-align:bottom; margin-left: 200px; margin-top: 699px;">
+      <img src="img/crocheticon.png"
+        style="position: absolute; vertical-align:bottom; margin-left: 200px; margin-top: 839px;">
+
+      <div class="aMText">
+        <img src="img/IMG_20210918_181638 (2).jpg" width="244.13px" height="366px"
+          style="box-shadow: 10px 10px 5px rgb(48, 47, 47); vertical-align: middle;">
+        <p> Hi, I'm a 2D and 3D Artist currently studying Multimedia Applications and Videogame at the Lusófona
+          University of Porto. I don't have, yet, any job experience but some at game developing during Jams, as well as
+          team work.<br>
+          I'm a fast learner and very passionate about what i want to make. <br> Although i'm an artist, i like to code
+          too.
+          I know c#, HTML, CSS and JavaScript. And a use mostly Unity.<br>
+          I'm varied about my hobbies. I can go from a Nerd to a grandma real quick. i like videogames, movies, etc but
+          also crochet and reading books.</p>
+      </div>
+
+    </div>
+
+    <!-- Skills -->
+
+    <div id="skills" class="skills" style="display: none;">
+
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="margin-left: 37%; display: inline-flex;">
+      <h1>Skills</h1>
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="display: inline-block;">
+      <br>
+
+      <div class="skillsItem" style="margin-left: 160px;">
+
+      </div>
+
+      <div class="skillsItem">
+
+      </div>
+
+      <div class="skillsItem">
+
+      </div>
+
+    </div>
+
+    <!-- Works -->
+
+    <div id="works" class="works" style="display: none;">
+
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="margin-left: 37%; display: inline-flex;">
+      <h1>Works</h1>
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="display: inline-block;">
+      <br>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact" class="contact" style="display: none;">
+
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="margin-left: 33%; display: inline-flex;">
+      <h1>Contact</h1>
+      <img src="img/Elipse 4.png" width="34px" height="34px" style="display: inline-block;">
+      <br>
+
+      <a href="https://www.instagram.com/try.ink.3d/" target=”_blank”>
+        <img src="img/insta.png" style="display: inline-block; margin-left: 330px; margin-top: 165px;">
+      </a>
       
+      <a href="https://www.linkedin.com/in/jenifer-lagoa%C3%A7a-77a831216/" target=”_blank”>
+        <img src="img/linkedin.png" style="display: inline-block; margin-left: 350px; margin-top: 165px;">
+      </a>
+      
+      <br>
+      <a href="mailto: jeniferlagoaca@gmail.com">
+        <img src="img/mail.png" style="margin-left: 40%;">
+      </a>
+      
+
     </div>
 
 
@@ -91,29 +190,61 @@
 
   <script>
 
+    var prev = document.getElementById("carousel");
     var core = document.getElementById("core");
-    var mainCarousel =document.getElementById("carousel");
+    var mainCarousel = document.getElementById("carousel");
 
-    function main(){
+    function main() {
       core.style.backgroundColor = 'black';
-      mainCarousel.style.visibility = 'visible';
+
+      if (prev.style.display == 'block') {
+        prev.style.display = 'none';
+        document.getElementById("carousel").style.display = 'block';
+        prev = document.getElementById("carousel");
+      }
+
     }
 
-    function aboutMe(){
+    function aboutMe() {
       core.style.backgroundColor = '#443C3C';
-      mainCarousel.style.visibility = 'hidden';
+
+      if (prev.style.display == 'block') {
+        prev.style.display = 'none';
+        document.getElementById("aboutMe").style.display = 'block';
+        prev = document.getElementById("aboutMe");
+      }
+
     }
 
-    function skills(){
+    function skills() {
       core.style.backgroundColor = '#5B5252';
+
+      if (prev.style.display == 'block') {
+        prev.style.display = 'none';
+        document.getElementById("skills").style.display = 'block';
+        prev = document.getElementById("skills");
+      }
+
     }
 
-    function works(){
+    function works() {
       core.style.backgroundColor = '#756969';
+
+      if (prev.style.display == 'block') {
+        prev.style.display = 'none';
+        document.getElementById("works").style.display = 'block';
+        prev = document.getElementById("works");
+      }
     }
 
-    function contact(){
+    function contact() {
       core.style.backgroundColor = '#9B8D8D';
+
+      if (prev.style.display == 'block') {
+        prev.style.display = 'none';
+        document.getElementById("contact").style.display = 'block';
+        prev = document.getElementById("contact");
+      }
     }
 
   </script>

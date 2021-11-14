@@ -62,9 +62,17 @@ div.panel{
     overflow:hidden;
 }
 
-.navitem, a:link, a{
-    font-size: 50px;
-    color: black !important;
+
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    padding-top: 54px;
+    padding-left: 55px;
+    padding-right: 55px;
+    display: inline-block;
+    color: #CCCCCC;
+    font-family: 'Kaushan Script', cursive;
 }
 
 a:hover{
@@ -91,13 +99,29 @@ div.core{
     flex: 1;
 }
 
-h1{
-    text-align: center;
-    color: #dfe0e0;
+.aMText {
+    background-color: #2b2a2a46;
+    
+    width: 950px;
+    height: 630px;
+    margin-left: 154px;
+    margin-top: 110px;
+    display: flex;
+}
+
+.skillsItem{
+    width: 400px;
+    height: 731px;
+    background-color: #CCCCCC;
+    display: inline-block;
+    margin-right: 42px;
+    margin-top: 30px;
 }
 
 p{
     /*margin: 0px;*/
-    font-size: 25px;
+    font-size: 30px;
     margin: 20px;
+    font-family: 'Kaushan Script', cursive;
+    color: #CCCCCC;
 }
