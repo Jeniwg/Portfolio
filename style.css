@@ -75,6 +75,18 @@ h1{
     font-family: 'Kaushan Script', cursive;
 }
 
+h2 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 15px;
+    color: #CCCCCC;
+    font-family: 'Kaushan Script', cursive;
+}
+
+hr{
+    border-top: 15px dashed black;
+}
+
 a:hover{
     color: rgb(182, 177, 151) !important;
 }
@@ -109,13 +121,88 @@ div.core{
     display: flex;
 }
 
+#AbMeImg{
+    position: absolute; 
+    vertical-align: bottom; 
+    margin-left: 200px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}   
+
+
+@keyframes animI {
+    0%   {right:0px;}
+	25%  {right:230px;}
+	50%  {right:0px;}
+	75%  {right:230px;}
+	100% {right:0px;}
+}
+
+@keyframes animII {
+    0%   {right:230px; }
+	25%  {right:0px;}
+	50%  {right:230px;}
+	75%  {right:0px;}
+	100% {right:230px;}
+    
+}
+
 .skillsItem{
     width: 400px;
     height: 731px;
     background-color: #CCCCCC;
     display: inline-block;
+    vertical-align: top;
     margin-right: 42px;
     margin-top: 30px;
+    padding-left: 10px;
+}
+.skillsIcon {
+    width: 128px; 
+    height: 128px;
+}
+
+.skillBar {
+    border-top: 5px solid black;
+}
+
+.skillName {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+.worksItem{
+    width: 548px;
+    height: 804px;
+    margin-left: 66px;
+    display: inline-block; 
+    vertical-align: top;
+}
+
+.scroll {
+    width:398px;
+    height: 700px;
+    line-height:3em;
+    overflow:scroll;
+    overflow-x: hidden;
+    padding:15px; 
+    position: relative;
+    margin-left: 80px;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.showWork{
+    background-color: white;
+    width:auto;
+    height:1080px;
+    vertical-align: top;
+    position: absolute;
+    z-index: 1;
+    
 }
 
 p{
@@ -125,3 +212,5 @@ p{
     font-family: 'Kaushan Script', cursive;
     color: #CCCCCC;
 }
+
+
