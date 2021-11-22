@@ -26,6 +26,11 @@ div.panel{
     position: relative;
     width: 400px;
     height: 100px;
+
+    transition: 
+    height 1s,
+    visibility 0s;
+
 }
 .img {
     display: block;
@@ -46,21 +51,21 @@ div.panel{
       visibility 0s 1s;/*delay transition to "hidden"*/
 }
     
-.acordion-item:hover #hidden {
-    height: 100px;
+.acordion-item:hover{
+    height: 200px;
     visibility: visible;
+    background-image: url("img/Grupo 3.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
     
     
     /*mouse-in transition*/
     transition:
       height 1s, /*normally transition height*/
-      visibility 0s; /*make "visible" instantly*/
+      visibility 0s; 
+      background-color: 1s;
 }
 
-#hidden {
-    background: papayawhip;
-    overflow:hidden;
-}
 
 
 
@@ -84,7 +89,7 @@ h2 {
 }
 
 hr{
-    border-top: 15px dashed black;
+    border-top: 5px dashed black;
 }
 
 a:hover{
@@ -166,11 +171,11 @@ div.core{
     border-top: 5px solid black;
 }
 
-.skillName {
+/*.skillName {
     font-size: 30px;
     color: black;
     text-align: center;
-}
+}*/
 .worksItem{
     width: 548px;
     height: 804px;
@@ -196,12 +201,12 @@ div.core{
 }
 
 .showWork{
-    background-color: white;
-    width:auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    width:100vw;
     height:1080px;
-    vertical-align: top;
     position: absolute;
-    z-index: 1;
+    z-index: 100;
+    margin-top: 0px;
     
 }
 
