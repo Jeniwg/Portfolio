@@ -7,7 +7,7 @@ body{
 
 div.panel{
     width: 400px;
-    height: 100vh;
+    height: 100%;
     background-color: #785E5E;
     position: fixed;
     
@@ -89,7 +89,9 @@ h2 {
 }
 
 hr{
-    border-top: 5px dashed black;
+    width: 50%;
+    border-top: 10px dashed black;
+    opacity: 1;
 }
 
 a:hover{
@@ -162,13 +164,29 @@ div.core{
     margin-top: 30px;
     padding-left: 10px;
 }
-.skillsIcon {
-    width: 128px; 
-    height: 128px;
+
+.skillName{
+    font-size: 20px;
+    margin: 0;
+    color: black;
+    position: relative;
 }
 
-.skillBar {
-    border-top: 5px solid black;
+.skillsIcon {
+    width: 73px; 
+    height: 73px;
+}
+
+.circleSection{
+    width: 307px;
+    height: 307px;
+    background-color: aquamarine;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.circleBar{
+    position: absolute;
 }
 
 /*.skillName {
@@ -210,6 +228,28 @@ div.core{
     
 }
 
+#carouselWorks{
+    width:1160px;
+    height:652.5px;
+    margin-top: 100px;
+    margin-left: 15px;
+    display: inline-block;
+}
+.imgWork{
+    width:100%;
+    height:auto;
+}
+
+.workText{
+    display: inline-block;
+    width:600px;
+    height: 800px;
+    background-color: aquamarine;
+    margin-left: 80px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+
 p{
     /*margin: 0px;*/
     font-size: 30px;
@@ -218,4 +258,11 @@ p{
     color: #CCCCCC;
 }
 
+#workTitle{
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    color: #CCCCCC;
+    text-align:center;
+    text-decoration: underline #CCCCCC;
+}
 
