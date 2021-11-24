@@ -175,25 +175,36 @@ div.core{
 .skillsIcon {
     width: 73px; 
     height: 73px;
+    position: relative;
+    
+}
+
+.skillRow{
+    width: 300;
+    height: 73px;
+    margin: 10px;
 }
 
 .circleSection{
     width: 307px;
     height: 307px;
-    background-color: aquamarine;
     margin-top: 25px;
     margin-left: 40px;
 }
 
 .circleBar{
     position: absolute;
+    
 }
 
-/*.skillName {
+.skillName {
     font-size: 30px;
     color: black;
     text-align: center;
-}*/
+    display: inline-block;
+    margin-top: 20px;
+}
+
 .worksItem{
     width: 548px;
     height: 804px;
@@ -266,3 +277,6 @@ p{
     text-decoration: underline #CCCCCC;
 }
 
+.contactIcon:hover{
+    transform: scale(1.2);
+}
