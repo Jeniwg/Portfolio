@@ -12,6 +12,8 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <title>Jenifer's Portfolio</title>
+  <!-- Icon -->
+  <link rel="icon" href="img/icon.ico" type="image/icon type">
 
   <!-- Bootstrap JS link -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -28,7 +30,8 @@
 </head>
 
 <body>
-  <!--Pop up Show Work (Appear when a work is selected) -->
+  <!--Section: Pop up Show Work. (Appear when a work is selected) -->
+  <!-- JavaScipt Lines: 561_565.Close the Pop up-->
   <div class="showWork" id="showWork" style="display: none;">
     <button onclick="closeShow()" type="button" class="btn-close btn-close-white" aria-label="Close"
       style="font-size: 25px; margin: 5px;"></button>
@@ -70,35 +73,35 @@
 
   </div>
 
-  <!-- Pannel -->
+  <!-- Section: Pannel -->  
+  <!-- JavaScript Lines: 357_401. Let the div bigger and show the icon. -->
+  <!-- JavaScript Lines: 403_457. Show the div of the section selected and hide the others. -->
 
   <div class="panel">
     <a onclick="main()">
-      <img class="logo" src="img/Elipse 1.png">
+      <img class="logo" src="img/logoAnim.gif">
     </a>
     <br> <br>
-    <div class="acordion">
+    <div class="acordion" id="acordion">
       <a onclick="aboutMe()">
-        <div class="acordion-item" style="background-color: #443C3C;">
-          <div class="btn">
-            <span>ABOUT ME</span>
-          </div>
+        <div class="acordion-item one" id="acordion-item one" style="background-color: #443C3C;">
+          <button onclick="panel('one')" type="button" class="btn btn-outline-dark">About Me</button>
         </div>
       </a>
 
       <a onclick="skills()">
-        <div class="acordion-item" style="background-color: #5B5252;">
-
+        <div class="acordion-item two" id="acordion-item two" style="background-color: #5B5252;">
+          <button onclick="panel('two')" type="button" class="btn btn-outline-dark">Skills</button>
         </div>
       </a>
       <a onclick="works()">
-        <div class="acordion-item" style="background-color: #756969;">
-
+        <div class="acordion-item three" id="acordion-item three" style="background-color: #756969;">
+          <button onclick="panel('three')" type="button" class="btn btn-outline-dark">Works</button>
         </div>
       </a>
       <a onclick="contact()">
-        <div class="acordion-item" style="background-color: #9B8D8D;">
-
+        <div class="acordion-item four" id="acordion-item four" style="background-color: #9B8D8D;">
+          <button onclick="panel('four')" type="button" class="btn btn-outline-dark">Contact</button>
         </div>
       </a>
     </div>
@@ -109,7 +112,8 @@
 
   <div class="core" id="core">
 
-    <!-- Main Screen -->
+    <!-- Section: Main Screen. -->
+    <!-- Show works while in the main menu. -->
 
     <div id="carousel" class="carousel slide" data-bs-ride="carousel" style="display:block">
       <div class="carousel-inner">
@@ -136,7 +140,8 @@
       </button>
     </div>
 
-    <!-- About Me -->
+    <!-- Sectio: About Me -->
+    <!-- Icons with an animation(type I or II). Text with an image. -->
 
     <div id="aboutMe" class="aboutMe" style="display: none;">
 
@@ -166,7 +171,8 @@
 
     </div>
 
-    <!-- Skills -->
+    <!-- Section: Skills -->~
+    <!-- Divided in 3 sections shows for each one a color divided circle with a legend below -->
 
     <div id="skills" class="skills" style="display: none;">
 
@@ -175,6 +181,7 @@
       <img src="img/Elipse 4.png" width="34px" height="34px" style="display: inline-block;">
       <br>
 
+      <!-- 2D section -->
       <div class="skillsItem" style="margin-left: 160px;">
         <div class="circleSection">
           <h2 style="color: #000000; position: absolute; margin: 110px;">2D</h2>
@@ -202,10 +209,9 @@
           <p class="skillName">Painting</p>
         </div>
 
-
-
       </div>
 
+      <!-- 3D section -->
       <div class="skillsItem">
         <div class="circleSection">
           <h2 style="color: #000000; position: absolute; margin: 110px;">3D</h2>
@@ -235,6 +241,7 @@
 
       </div>
 
+      <!-- Others section -->
       <div class="skillsItem">
         <div class="circleSection">
           <h2 style="color: #000000; position: absolute; margin: 70px; margin-top: 100px;">Others</h2>
@@ -256,8 +263,9 @@
       </div>
     </div>
 
-    <!-- Works -->
-
+    <!-- Section: Works -->
+    <!-- Divided in 2 parts. Both have a scrolling div with a hidden scrollbar to show an images of the works.-->
+    <!-- JavaScript Lines: 459_559.Make appear the Pop up show work section. To see more about the work. -->
     <div id="works" class="works" style="display: none;">
 
       <img src="img/Elipse 4.png" width="34px" height="34px" style="margin-left: 37%; display: inline-flex;">
@@ -305,7 +313,8 @@
     </div>
 
 
-    <!-- Contact -->
+    <!-- Section: Contact -->
+    <!-- Links to diferents website (Opened in a diferent tab) or the email.-->
 
     <div id="contact" class="contact" style="display: none;">
 
@@ -329,13 +338,12 @@
         <img class="contactIcon" src="img/mail.png" style="margin-left: 40%;">
       </a>
 
-
     </div>
-
 
   </div>
 
 
+<!-- Java Script -->
 
   <script>
 
@@ -343,7 +351,57 @@
     var core = document.getElementById("core");
     var mainCarousel = document.getElementById("carousel");
     var showWork = document.getElementById("showWork");
+    var name;
+    var array = document.getElementsByClassName("acordion")
 
+    //Close all the acordion items of the panel section and Open the one the button send.
+    //Depending on the panel the icon will change.
+    function panel(secondName) {
+
+      const index = ['one', 'two', 'three', 'four'];
+      var indexLength = index.length;
+    
+      name = 'acordion-item ' + secondName;
+      for (let i = 0; i < indexLength; i++) {
+
+        var panelOn = document.getElementById('acordion-item ' + index[i]);
+
+        panelOn.style.height = "100px";
+        panelOn.style.visibility = "none";
+        panelOn.style.backgroundImage = '';
+        
+      }
+
+      panelOn = document.getElementById(name);
+      panelOn.style.height = "200px";
+
+      switch(secondName)
+      {
+        case 'one':
+        panelOn.style.backgroundImage = 'url("img/about.png")';
+        break;
+
+        case 'two':
+        panelOn.style.backgroundImage = 'url("img/skills.png")';
+        break;
+
+        case 'three':
+        panelOn.style.backgroundImage = 'url("img/works.png")';
+        break;
+
+        case 'four':
+        panelOn.style.backgroundImage = 'url("img/contact.png")';
+        break;
+
+      }
+      
+      panelOn.style.backgroundRepeat = 'no-repeat';
+      panelOn.style.backgroundPosition = 'bottom center';
+
+    }
+
+    //Switching divs.
+    //Close the previous openend section and open the selected one which become the new previous.
 
     function main() {
       core.style.backgroundColor = 'black';
@@ -398,6 +456,9 @@
       }
     }
 
+    //Works Pop up.
+    //Make appear the Pop up and depending on the work name sent, it will display different things.
+
     function show(workName) {
       showWork.style.display = 'block';
 
@@ -406,7 +467,7 @@
         var img2 = "img/works/person2.png";
         var img3 = "img/works/person3.png";
         var newTitle = "Bernardo";
-        var newSinops = "Ilustration of a character created for a University project. <br> In the images they are the finished ilustration and some sketchs of the character but also the character sheet";
+        var newSinops = "Ilustration of a character created for a University project. <br> In the images they are the finished ilustration and some sketchs of the character but also the character sheet.";
         changes(img1, img2, img3, newTitle, newSinops);
       }
 
@@ -425,7 +486,7 @@
         var img2 = "img/works/env2.png";
         var img3 = "img/works/env3.png";
         var newTitle = "Haunted building";
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "Scenario of a visual novel idea for a University project.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
@@ -435,7 +496,7 @@
         var img2 = "img/works/viking.png";
         var img3 = "img/works/viking.png";
         var newTitle = 'Viking House <span class="badge bg-secondary">WIP</span>';
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "Sketchs of a viking house, they may become part of a scenario one day.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
@@ -445,7 +506,7 @@
         var img2 = "img/works/WeellLowPoly2.png";
         var img3 = "img/works/WeellLowPoly3.png";
         var newTitle = 'Well LowPoly';
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "I followed the Grant Abbitt's tutorial. <br> Made with Blender.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
@@ -455,7 +516,7 @@
         var img2 = "img/works/japenesehouse2.png";
         var img3 = "img/works/japenesehouse3.png";
         var newTitle = 'Japenese House';
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "Personal work. <br> A 3d model of a japanese house that i founded on the internet. <br> Made with Blender.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
@@ -465,7 +526,7 @@
         var img2 = "img/works/room2.png";
         var img3 = "img/works/room3f.png";
         var newTitle = 'Room';
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "Personal work. <br> A simple room <br> Made with Blender.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
@@ -475,11 +536,13 @@
         var img2 = "img/works/chinesestreet2.png";
         var img3 = "img/works/chinesestreet3.png";
         var newTitle = 'Chinese Street <span class="badge bg-secondary">WIP</span>';
-        var newSinops = "Qualquer coisa novamente";
+        var newSinops = "Personal work. <br> 3D modeling a building from an image. <br> Made with Blender.";
 
         changes(img1, img2, img3, newTitle, newSinops);
       }
     }
+
+    //Get the information that is needed to be changed and send it to the right place.
 
     function changes(img1, img2, img3, newTitle, newSinops) {
       var firstImage = document.getElementById("imgOne");
@@ -495,13 +558,11 @@
       text.innerHTML = newSinops;
     }
 
+    //close button hide the pop up.
     function closeShow() {
       console.log("close");
       showWork.style.display = 'none';
     }
-
-
-
 
   </script>
 

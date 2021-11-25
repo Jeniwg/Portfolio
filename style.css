@@ -13,16 +13,19 @@ div.panel{
     position: fixed;
     
 }
+
 .logo{
     margin-top: 33px;
     margin-left: 44px;
 }
+
 .acordion {
     width: 400px;
     height: 400px;
     background-color: blue;
     position: relative;
 }
+
 .acordion-item {
     position: relative;
     width: 400px;
@@ -34,59 +37,68 @@ div.panel{
 
 }
 
+.one:hover{
+    height: 200px;
+    visibility: visible;
+    background-image: url("img/about.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+
+    transition:
+      height 1s, 
+      visibility 0s; 
+      background-color: 1s;
+}
+
+.two:hover{
+    height: 200px;
+    visibility: visible;
+    background-image: url("img/skills.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+    
+    transition:
+      height 1s, 
+      visibility 0s; 
+      background-color: 1s;
+}
+.three:hover{
+    height: 200px;
+    visibility: visible;
+    background-image: url("img/works.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+    
+    transition:
+      height 1s, 
+      visibility 0s; 
+      background-color: 1s;
+}
+.four:hover{
+    height: 200px;
+    visibility: visible;
+    background-image: url("img/contact.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+    
+    transition:
+      height 1s, 
+      visibility 0s; 
+      background-color: 1s;
+}
+
 .btn{
     margin-left: 70px;
-    margin-top: 8px;
-    line-height: 50px;
+    margin-top: 25px;
 	height: 50px;
 	width: 250px;
-    color: #FFF;
-    transition: all 0.3s;
     position: relative;
     font-size: 35px;
-}
-.btn span {
-	transition: all 0.3s;
-}
-.btn::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border-top-width: 3px;
-	border-bottom-width: 3px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-color: rgba(255, 255, 255, 0.7);
-	border-bottom-color: rgba(255,255,255,0.7);
-	transform: scale(0.1, 1);
-}
-.btn:hover span {
-	letter-spacing: 2px;
-}
-.btn-one:hover::before {
-	opacity: 1;	
-	transform: scale(1, 1);	
-}
-.btn::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	transition: all 0.3s;
-	background-color: rgba(255,255,255,0.1);
-}
-.btn:hover::after {
-	opacity: 0;	
-	transform: scale(0.1, 1);
+    
 }
 
 .img {
@@ -97,34 +109,7 @@ div.panel{
     height: 100px;
     width: auto;
 }
-#hidden {
-    /*display:none -like behavior achieved by also reducing the height to 0*/
-    visibility: hidden;
-    height: 0;
     
-    /*mouse-out transition*/
-    transition:
-      height 1s,/*normally transition height*/
-      visibility 0s 1s;/*delay transition to "hidden"*/
-}
-    
-.acordion-item:hover{
-    height: 200px;
-    visibility: visible;
-    background-image: url("img/Grupo 3.png");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    
-    
-    /*mouse-in transition*/
-    transition:
-      height 1s, /*normally transition height*/
-      visibility 0s; 
-      background-color: 1s;
-}
-
-
-
 
 h1{
     font-size: 100px;
@@ -134,7 +119,6 @@ h1{
     padding-right: 55px;
     display: inline-block;
     color: #CCCCCC;
-    font-family: 'Kaushan Script', cursive;
 }
 
 h2 {
@@ -142,7 +126,6 @@ h2 {
     text-align: center;
     padding-top: 15px;
     color: #CCCCCC;
-    font-family: 'Kaushan Script', cursive;
 }
 
 hr{
@@ -312,7 +295,7 @@ div.core{
     display: inline-block;
     width:600px;
     height: 800px;
-    background-color: aquamarine;
+    background-color: rgba(0, 0, 0, 0.733);
     margin-left: 80px;
     margin-top: 50px;
     vertical-align: top;
